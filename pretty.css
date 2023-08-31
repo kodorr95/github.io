@@ -1,0 +1,74 @@
+.wrapper {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: grey;
+    background: url(./assetts/viewing-the-earths-rotation-from-space_video_720p.mp4);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#pageHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.pageTitle {
+    font-size: xx-large;
+}
+
+#navmenu {
+    margin-right: 0.01%;
+}
+
+/* ? Process is the parent ID to both centralInfoBox, backgroundViddy, and moonphase. It was the only way I figured out how to arrange these on opposite ends of the page */
+
+#process {
+    display: flex;
+    justify-content: space-between;
+}
+
+#centralInfoBox {
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    border: solid 2px white;
+    width: fit-content;
+    margin-top: 2.5%;
+    margin-left: 5%;
+    align-items: left;
+
+}
+
+/* ? Fixing the video to an absolute reference point of 0,0 (top,left), covering 100% of the page, and making sure that it is behind every single other part of this page */
+.backgroundViddy {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ? Empty flex contianer of fixed size that will display phases of the moon based upon API pull for moon phase */
+#moonphase {
+    display: flex;
+    width: 250px;    
+    height: 250px;
+    margin-top: 2.5%;
+    margin-right: 5%;
+    
+}    
+
+/* ? Footer */
+
+footer {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction:column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

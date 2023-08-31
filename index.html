@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MoonAPI</title>
+        <link rel="stylesheet" href="pretty.css">
+    </head>
+    <body class="wrapper">
+
+        <nav id="pageHeader">
+            <div class="pageTitle">MoonAPI</div>
+            <!-- <div class="pageButtons">
+                <ul>
+                    <li>Home</li>
+                    <li>Weather</li>
+                    <li>News</li>
+                    <li>Photos</li>
+                    <li>Videos</li>
+                </ul>
+            </div> -->
+            <select name="navmenu" id="navmenu">
+                    <option value="home">Home</option>
+                    <option value="weather">Weather</option>
+                    <option value="news">News</option>
+                    <option value="photos">Photos</option>
+                    <option value="videos">Videos</option>
+                </select>
+        </nav>
+
+        <video class ="backgroundViddy" autoplay loop muted>
+            <source src="./assetts/viewing-the-earths-rotation-from-space_video_720p.mp4" type="video/mp4">
+        </video>
+        
+    <div id="process">
+        <div id="centralInfoBox">
+            <form>
+                <br>Zipcode: <input id="zipCode" type="text" name="zipCode"><br>
+                <br>Date: <input id="userDate" type="text" name="userDate" placeholder='YYYY-MM-DD format'><br><br>
+                <input id ="submitB" type="button" onclick="apiPull(zipCode, userDate)" value="Submit">
+                <input id="clearB" type="button" onclick="clearForm(clearBtn)" value="Clear">
+            </form> 
+            <p class="moonTimeRise">Moon Rise:</p>
+            <p class="moonTimeSet">Moon Set:</p>
+            <p class="infoIllum">Illumination:</p>
+            <p class="infoPhase">Phase:</p>
+            
+        </div>
+        <div>
+            <img id ="moonphase" src="" alt="">
+        </div>
+    </div>
+        <script type="text/javascript" src="weather.js"></script>
+    </body>
+    <footer>
+        <div id="about"><a href="https://github.com/kodorr95/">About</a></div>
+        <div id="poweredBy">Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+            <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+        </div>
+
+    </footer>
+</html>
